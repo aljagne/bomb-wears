@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
 import { getProductsInCollection } from '../lib/shopify.js'
-import Head from 'next/head'
-import Image from 'next/image'
+import ProductList from '../components/ProductList.js'
 
 const Home: NextPage = ({ products }) => {
   console.log(products)
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-        Hello from Bomb-wears shopify next.js
+    <div className="">
+        <ProductList products={products} />
     </div>
   )
 }
